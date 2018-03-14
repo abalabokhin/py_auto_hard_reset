@@ -20,21 +20,21 @@ def check_host(host):
         return False
 
 def down_host(pin):
-    GPIO.output(i, GPIO.LOW)
-    itime.sleep(6)
-    GPIO.output(i, GPIO.HIGH)
+    GPIO.output(pin, GPIO.LOW)
+    time.sleep(6)
+    GPIO.output(pin, GPIO.HIGH)
     print(pin, "down")
 
 def up_host(pin):
-    GPIO.output(i, GPIO.LOW)
+    GPIO.output(pin, GPIO.LOW)
     time.sleep(0.2)
-    GPIO.output(i, GPIO.HIGH)
+    GPIO.output(pin, GPIO.HIGH)
     print(pin, "up")
 
 def main():
-    pins = [16, 24]
-    hosts = ["192.168.0.150", "192.168.0.109"]
-    sleep_time = 6
+    pins = [16]
+    hosts = ["192.168.0.102"]
+    sleep_time = 300
 
     setup_pins(pins)
 
