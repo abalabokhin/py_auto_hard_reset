@@ -34,7 +34,7 @@ def up_host(pin):
 def main():
     pins = [16]
     hosts = ["192.168.0.102"]
-    sleep_time = 300
+    sleep_time = 300 
 
     setup_pins(pins)
 
@@ -47,7 +47,7 @@ def main():
                 down_host(pins[i])
                 time.sleep(0.5)
                 up_host(pins[i])
-        
+
         time.sleep(sleep_time)
 
 main()
